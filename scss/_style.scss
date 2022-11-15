@@ -1,25 +1,30 @@
 // header
 header {
-  padding-top: 20px;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  .header-container {
-    @extend %container;
-    @extend %d-flex;
-    @media (max-width: 992px) {
-      flex-wrap: inherit;
-      @include d-flex-easy(flex, space-between, center);
-      padding-inline: 30px;
+    .header-container {
+        margin-top: 20px;
+        @extend %container;
+        @extend %d-flex;
+        @media (max-width: 992px) {
+        flex-wrap: inherit;
+        @include d-flex-easy(flex, space-between, center);
+        padding-inline: 30px;
+        }
     }
-  }
+}
+header{
+    .main-bg{
+        background-image: url(../images/index-bg-banner.webp);
+        background-size: cover;
+        background-position: 30%;
+        height: 83vh;
+    }
 }
 .header-container {
   .navigation {
     justify-content: flex-end;
     .navbar-ul {
-      width: 562px;
+      max-width: 562px;
+      width: 100%;
       @extend %d-flex;
       @media (max-width: 992px) {
         flex-direction: column;
@@ -61,48 +66,58 @@ header {
     }
   }
 }
-// index.html
-// main-page-section
-.main-page {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin-top: -50px;
-  .main-bg {
-    background-image: url(../images/index-bg-banner.webp);
-    background-size: cover;
-    background-position: 30%;
-    height: 83vh;
-    @extend %d-flex-center;
-    padding: 20px;
-    @media (max-width: 992px) {
-      align-items: flex-end;
+header{
+    .main-bg{
+        background-image: url(../images/index-bg-banner.webp);
+        background-size: cover;
+        background-position: 30%;
+        height: 83vh;
     }
-  }
 }
-.main-bg {
-  .main-page-container {
-    @extend %container;
-    .main-title-body {
-      user-select: none;
-      h3 {
-        max-width: 576px;
-        width: 100%;
-        @include font("Poppins", 800, 62px, $white);
-        line-height: 72px;
-        @media (max-width: 480px) {
-          font-size: 50px;
-          line-height: 50px;
+// title-box for header in index.html
+
+header{
+    .main-bg{
+        .main-title-box{
+            height: 72vh;
+            @extend %d-flex-center;
+            .main-title-container{
+                @extend %container;
+                @media (max-width:1110px) {
+                    padding-inline: 20px;
+                }
+                .main-title-body {
+                    user-select: none;
+                    h3 {
+                      max-width: 576px;
+                      width: 100%;
+                      @include font("Poppins", 800, 62px, $white);
+                      line-height: 72px;
+                      @media (max-width: 480px) {
+                        font-size: 50px;
+                        line-height: 50px;
+                      }
+                    }
+                    h4 {
+                      max-width: 352px;
+                      width: 100%;
+                      margin-top: 20px;
+                      @include font("Poppins", normal, 14px, $white);
+                      line-height: 20px;
+                    }
+                  }
+            }
         }
-      }
-      h4 {
-        max-width: 352px;
-        width: 100%;
-        margin-top: 20px;
-        @include font("Poppins", normal, 14px, $white);
-        line-height: 20px;
-      }
     }
-  }
+}
+
+
+
+// check section
+.check-section{
+    .check-container{
+        @extend %container;
+        height: 148px;
+        background-color: blue;
+    }
 }
