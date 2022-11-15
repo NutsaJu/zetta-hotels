@@ -1,14 +1,17 @@
 // header
 header {
   padding-top: 20px;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
   .header-container {
     @extend %container;
-    background-color: green;
     @extend %d-flex;
     @media (max-width: 992px) {
       flex-wrap: inherit;
       @include d-flex-easy(flex, space-between, center);
-      padding-left: 30px;
+      padding-inline: 30px;
     }
   }
 }
@@ -24,12 +27,28 @@ header {
       }
       .nav-li {
         @include font("Poppins", normal, 12px, $white);
-        @media (max-width:992px) {
-            margin-top: 10px;
+        @media (max-width: 992px) {
+          margin-top: 10px;
         }
-            &:hover{
-                color: $blue;
-            }
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+.header-container {
+  .burger-menu {
+    border-color: $white;
+    &:hover {
+      border-color: $blue;
+    }
+    .burger-icon {
+      filter: brightness(0) saturate(100%) invert(98%) sepia(59%) saturate(96%)
+        hue-rotate(118deg) brightness(121%) contrast(100%) !important;
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(32%) sepia(52%)
+          saturate(4048%) hue-rotate(228deg) brightness(105%) contrast(94%) !important;
       }
     }
   }
@@ -39,6 +58,51 @@ header {
     @include font("Poppins", 600, 14px, $white);
     &:hover {
       color: $blue;
+    }
+  }
+}
+// index.html
+// main-page-section
+.main-page {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: -50px;
+  .main-bg {
+    background-image: url(../images/index-bg-banner.webp);
+    background-size: cover;
+    background-position: 30%;
+    height: 83vh;
+    @extend %d-flex-center;
+    padding: 20px;
+    @media (max-width: 992px) {
+      align-items: flex-end;
+    }
+  }
+}
+.main-bg {
+  .main-page-container {
+    @extend %container;
+    .main-title-body {
+      user-select: none;
+      h3 {
+        max-width: 576px;
+        width: 100%;
+        @include font("Poppins", 800, 62px, $white);
+        line-height: 72px;
+        @media (max-width: 480px) {
+          font-size: 50px;
+          line-height: 50px;
+        }
+      }
+      h4 {
+        max-width: 352px;
+        width: 100%;
+        margin-top: 20px;
+        @include font("Poppins", normal, 14px, $white);
+        line-height: 20px;
+      }
     }
   }
 }

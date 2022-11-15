@@ -82,7 +82,7 @@ a {
   font-style: normal;
   font-display: swap;
 }
-header .header-container {
+.main-bg .main-page-container, header .header-container {
   max-width: 1088px;
   width: 100%;
   margin: 0 auto;
@@ -100,11 +100,24 @@ header .header-container {
           align-items: center;
 }
 
+.main-page .main-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header {
   padding-top: 20px;
-}
-header .header-container {
-  background-color: green;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 992px) {
   header .header-container {
@@ -119,7 +132,7 @@ header .header-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 30px;
+    padding-inline: 30px;
   }
 }
 
@@ -157,6 +170,21 @@ header .header-container {
   color: #5863F8;
 }
 
+.header-container .burger-menu {
+  border-color: white;
+}
+.header-container .burger-menu:hover {
+  border-color: #5863F8;
+}
+.header-container .burger-menu .burger-icon {
+  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(59%) saturate(96%) hue-rotate(118deg) brightness(121%) contrast(100%) !important;
+          filter: brightness(0) saturate(100%) invert(98%) sepia(59%) saturate(96%) hue-rotate(118deg) brightness(121%) contrast(100%) !important;
+}
+.header-container .burger-menu .burger-icon:hover {
+  -webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(52%) saturate(4048%) hue-rotate(228deg) brightness(105%) contrast(94%) !important;
+          filter: brightness(0) saturate(100%) invert(32%) sepia(52%) saturate(4048%) hue-rotate(228deg) brightness(105%) contrast(94%) !important;
+}
+
 .header-container .nav-logo {
   font-family: "Poppins";
   font-weight: 600;
@@ -165,4 +193,58 @@ header .header-container {
 }
 .header-container .nav-logo:hover {
   color: #5863F8;
+}
+
+.main-page {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: -50px;
+}
+.main-page .main-bg {
+  background-image: url(../images/index-bg-banner.webp);
+  background-size: cover;
+  background-position: 30%;
+  height: 83vh;
+  padding: 20px;
+}
+@media (max-width: 992px) {
+  .main-page .main-bg {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.main-bg .main-page-container .main-title-body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.main-bg .main-page-container .main-title-body h3 {
+  max-width: 576px;
+  width: 100%;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 62px;
+  color: white;
+  line-height: 72px;
+}
+@media (max-width: 480px) {
+  .main-bg .main-page-container .main-title-body h3 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+.main-bg .main-page-container .main-title-body h4 {
+  max-width: 352px;
+  width: 100%;
+  margin-top: 20px;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
 }/*# sourceMappingURL=global.css.map */
