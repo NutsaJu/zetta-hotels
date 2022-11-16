@@ -81,6 +81,10 @@ header{
         .main-title-box{
             height: 72vh;
             @extend %d-flex-center;
+            @media (max-width:992px) {
+                align-items: flex-start;
+                padding-top: 20px;
+            }
             .main-title-container{
                 @extend %container;
                 @media (max-width:1110px) {
@@ -115,9 +119,54 @@ header{
 
 // check section
 .check-section{
+    margin-top: -74px;
+    @media (max-width:1100px) {
+      padding-inline: 10px;
+    }
     .check-container{
         @extend %container;
-        height: 148px;
-        background-color: blue;
+        padding:32px 100px 42px 92px;
+        background-color: $white;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 10%);
+        @media (max-width:520px) {
+          padding-inline:10px;
+        }
+
+    }
+}
+.check-form{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr)) 1fr;
+    grid-gap: 21px;
+    @media (max-width:1100px) {
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    }
+    @media (max-width:480px) {
+      grid-template-columns: 1fr;
+    }
+    .input-box{
+        label{
+            @include font('Poppins',500,13px,$blue);
+            margin-bottom: 5px;
+        }
+        input{
+            width: 100%;
+            padding: 15px;
+            background-color: $lightgrey;
+            border: none;
+            outline: none;
+            @include font('Poppins',normal,13px,$darkgrey);
+             &::placeholder{
+                color: $grey;
+             }
+        }
+    }
+    button{
+        width: 51px;
+        height: 51px;
+        margin-top: 18px;
+        background-color: $blue;
+        border: none;
+        @extend %d-flex-center;
     }
 }

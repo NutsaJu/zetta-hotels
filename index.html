@@ -27,8 +27,8 @@
                                 <a class="nav-link" aria-current="page" href="index.html">HOME</a>
                             </li>
                             <li class="nav-li dropdown">
-                                <a class="nav-link dropdown-toggle" href="rooms.html" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="rooms.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     ROOMS
                                 </a>
                                 <ul class="dropdown-menu">
@@ -60,20 +60,34 @@
                 <div class="main-title-container">
                     <div class="main-title-body">
                         <h3>The best hotel you will ever need</h3>
-                        <h4>When you get into a hotel room, you lock the door, and you know there is a secrecy, there is a luxury, there is fantasy. There is comfort. There is reassurance.</h4>
+                        <h4>When you get into a hotel room, you lock the door, and you know there is a secrecy, there is
+                            a luxury, there is fantasy. There is comfort. There is reassurance.</h4>
                     </div>
-                </div>    
+                </div>
             </div>
-        </div>    
+        </div>
 
     </header>
     <section class="check-section">
         <div class="check-container">
-            <form class="check-form" action="https://formspree.io/f/xkneyzwz">
+            <form class="check-form" action="https://formspree.io/f/xkneyzwz" method="post">
                 <div class="input-box">
                     <label for="check-in">Check In Date</label>
-                    <input type="date" id="check-in" name="check-in" placeholder="check in date">
+                    <input type="text" id="check-in" name="check-in" onfocus="(type='date')" onblur="(type='text')" 
+                     placeholder="check in date" required>
                 </div>
+                <div class="input-box">
+                    <label for="check-out">Check In Date</label>
+                    <input type="text" id="check-out" name="check-out" onfocus="(type='date')" onblur="(type='text')" 
+                     placeholder="check out date" required>
+                </div>
+                <div class="input-box">
+                    <label for="quantity">Rooms</label>
+                    <input type="number" id="quantity" min="1" max="7" placeholder="rooms" required>
+                </div>
+                <button type="submit">
+                    <img src="images/send-icon.svg" alt="image">
+                </button>
             </form>
         </div>
     </section>

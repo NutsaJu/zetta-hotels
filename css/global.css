@@ -47,6 +47,12 @@ a {
           box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff") format("woff");
@@ -100,7 +106,7 @@ a {
           align-items: center;
 }
 
-header .main-bg .main-title-box {
+.check-form button, header .main-bg .main-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,6 +215,14 @@ header .main-bg {
 header .main-bg .main-title-box {
   height: 72vh;
 }
+@media (max-width: 992px) {
+  header .main-bg .main-title-box {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 20px;
+  }
+}
 @media (max-width: 1110px) {
   header .main-bg .main-title-box .main-title-container {
     padding-inline: 20px;
@@ -246,7 +260,78 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
   line-height: 20px;
 }
 
+.check-section {
+  margin-top: -74px;
+}
+@media (max-width: 1100px) {
+  .check-section {
+    padding-inline: 10px;
+  }
+}
 .check-section .check-container {
-  height: 148px;
-  background-color: blue;
+  padding: 32px 100px 42px 92px;
+  background-color: white;
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 520px) {
+  .check-section .check-container {
+    padding-inline: 10px;
+  }
+}
+
+.check-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr)) 1fr;
+  grid-gap: 21px;
+}
+@media (max-width: 1100px) {
+  .check-form {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .check-form {
+    grid-template-columns: 1fr;
+  }
+}
+.check-form .input-box label {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 13px;
+  color: #5863F8;
+  margin-bottom: 5px;
+}
+.check-form .input-box input {
+  width: 100%;
+  padding: 15px;
+  background-color: #EEEEEE;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.check-form .input-box input::-webkit-input-placeholder {
+  color: #CECECE;
+}
+.check-form .input-box input::-moz-placeholder {
+  color: #CECECE;
+}
+.check-form .input-box input:-ms-input-placeholder {
+  color: #CECECE;
+}
+.check-form .input-box input::-ms-input-placeholder {
+  color: #CECECE;
+}
+.check-form .input-box input::placeholder {
+  color: #CECECE;
+}
+.check-form button {
+  width: 51px;
+  height: 51px;
+  margin-top: 18px;
+  background-color: #5863F8;
+  border: none;
 }/*# sourceMappingURL=global.css.map */
