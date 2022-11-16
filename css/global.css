@@ -53,6 +53,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type=date] {
+  display: block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1.2em;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff") format("woff");
