@@ -151,6 +151,7 @@ header{
             user-select: none;
         }
         input{
+            max-width: 260px;
             width: 100%;
             padding: 15px;
             background-color: $lightgrey;
