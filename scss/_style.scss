@@ -115,7 +115,7 @@ header{
     }
 }
 
-
+      //  index.html
 
 // check section
 .check-section{
@@ -151,7 +151,6 @@ header{
             user-select: none;
         }
         input{
-            max-width: 260px;
             width: 100%;
             padding: 15px;
             background-color: $lightgrey;
@@ -171,4 +170,98 @@ header{
         border: none;
         @extend %d-flex-center;
     }
+}
+
+// about-us section
+.about-us{
+  margin-top: 90px;
+  .about-us-container{
+    @extend %container;
+    @extend %d-flex;
+    @media (max-width:1115px) {
+      flex-direction: column;
+      padding-inline: 10px;
+    }
+  }
+}
+.about-us{
+  .about-us-container{
+    .about-us-wrapper{
+      max-width: 444px;
+      width: 100%;
+      padding: 37px 0px;
+      @media (max-width:1115px) {
+        max-width: none;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      } 
+    }
+  }
+}
+.about-us-wrapper{
+    h4{
+      @include font('Poppins',bold,14px,$blue);
+    }
+    h3{
+      @include font('Poppins',800,42px,$black);
+      line-height: 59px;
+    }
+    .about-us-text-body{
+      p{
+        &:nth-child(1){
+          @include font('Poppins',500,16px,$black);
+          line-height: 26px;
+          margin-top: 10px;
+        }
+        &:nth-child(2){
+          @include font('Poppins',normal,14px,$black);
+          line-height: 21px;
+          margin-top: 10px;
+        }
+      }
+    }
+    a{
+      .about-us-button{
+        margin-top: 20px;
+        width: 184px;
+        height: 50px;
+        background-color: $blue;
+        @extend %d-flex-center;
+        @include font('Poppins',normal,14px,$white);
+        &:hover{
+          background-color: $white;
+          border: 2px solid $blue;
+          color: $blue;
+        }
+        &:hover img{
+          filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+        }
+        img{
+          width: 10px;
+          height: 10px;
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(353deg) brightness(99%) contrast(103%);
+          margin-left: 10px;
+        }
+      } 
+    }
+}
+.about-us-img-wrapper{
+  max-width: 536px;
+  width: 100%;
+  display: grid;
+  --num-cols: 2;
+  grid-template-columns: repeat(var(--num-cols),1fr);
+  grid-gap: 16px;
+  grid-template-rows: 185px 260px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &:nth-child(3){
+      grid-column-end: span 2;
+    }
+  }
+
 }

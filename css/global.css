@@ -88,13 +88,13 @@ input::-webkit-inner-spin-button {
   font-style: normal;
   font-display: swap;
 }
-.check-section .check-container, header .main-bg .main-title-box .main-title-container, header .header-container {
+.about-us .about-us-container, .check-section .check-container, header .main-bg .main-title-box .main-title-container, header .header-container {
   max-width: 1088px;
   width: 100%;
   margin: 0 auto;
 }
 
-.header-container .navigation .navbar-ul, header .header-container {
+.about-us .about-us-container, .header-container .navigation .navbar-ul, header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +106,7 @@ input::-webkit-inner-spin-button {
           align-items: center;
 }
 
-.check-form button, header .main-bg .main-title-box {
+.about-us-wrapper a .about-us-button, .check-form button, header .main-bg .main-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,7 +307,6 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
           user-select: none;
 }
 .check-form .input-box input {
-  max-width: 260px;
   width: 100%;
   padding: 15px;
   background-color: #EEEEEE;
@@ -339,4 +338,114 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
   margin-top: 18px;
   background-color: #5863F8;
   border: none;
+}
+
+.about-us {
+  margin-top: 90px;
+}
+@media (max-width: 1115px) {
+  .about-us .about-us-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-inline: 10px;
+  }
+}
+
+.about-us .about-us-container .about-us-wrapper {
+  max-width: 444px;
+  width: 100%;
+  padding: 37px 0px;
+}
+@media (max-width: 1115px) {
+  .about-us .about-us-container .about-us-wrapper {
+    max-width: none;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.about-us-wrapper h4 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 14px;
+  color: #5863F8;
+}
+.about-us-wrapper h3 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 42px;
+  color: black;
+  line-height: 59px;
+}
+.about-us-wrapper .about-us-text-body p:nth-child(1) {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  line-height: 26px;
+  margin-top: 10px;
+}
+.about-us-wrapper .about-us-text-body p:nth-child(2) {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+  line-height: 21px;
+  margin-top: 10px;
+}
+.about-us-wrapper a .about-us-button {
+  margin-top: 20px;
+  width: 184px;
+  height: 50px;
+  background-color: #5863F8;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 14px;
+  color: white;
+}
+.about-us-wrapper a .about-us-button:hover {
+  background-color: white;
+  border: 2px solid #5863F8;
+  color: #5863F8;
+}
+.about-us-wrapper a .about-us-button:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+          filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+}
+.about-us-wrapper a .about-us-button img {
+  width: 10px;
+  height: 10px;
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(353deg) brightness(99%) contrast(103%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(353deg) brightness(99%) contrast(103%);
+  margin-left: 10px;
+}
+
+.about-us-img-wrapper {
+  max-width: 536px;
+  width: 100%;
+  display: grid;
+  --num-cols: 2;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-gap: 16px;
+  grid-template-rows: 185px 260px;
+}
+.about-us-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-us-img-wrapper img:nth-child(3) {
+  grid-column-end: span 2;
 }/*# sourceMappingURL=global.css.map */
