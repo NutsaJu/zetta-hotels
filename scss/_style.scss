@@ -396,3 +396,155 @@ header{
     }
   }
 }
+
+              // about-us testimonals
+.testimonals-bg{
+  margin-bottom: 50px;
+  background-image: url(../images/hotel-stairs-reverse.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: $darkwhite;
+  height: 487px;
+  padding-top: 76px;
+  @media (max-width:600px) {
+    background-size: cover;
+    background-position: 40%;
+  }
+  @media (max-width:690px) {
+    padding-top: 20px;
+  }
+  .testimonals-container{
+    @extend %container;
+    height: 100%;
+    @media (max-width:1122px) {
+      width: 95%;
+    }
+  }
+}
+.testimonals-container{
+  .testimonals-title-body{
+    user-select: none;
+    width: 50%;
+    @media (max-width:1100px) {
+      width: 80%;
+      text-align: center;
+    }
+    h4{
+      @include font('Poppins',bold,14px,$blue);
+      line-height: 20px;
+    }
+    h3{
+      @include font('Poppins',800,42px,$black);
+      line-height: 57.5px;
+      @media (max-width:1100px) {
+        text-shadow:2px 2px $white;
+      }
+      @media (max-width:690px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+  }
+}
+.testimonals-slider{
+  height: calc(100% - 135px);
+  padding-top: 19px;
+  @media (max-width:690px) {
+    height: calc(100% - 90px);
+  }
+  @media (max-width:498px) {
+    height: calc(100% - 125px);
+  }
+  @media (max-width:350px) {
+    height: calc(100% - 160px);
+  }
+}
+.testimonals-card-wrapper{
+  padding-left: 10px;
+  max-width: 376px;
+  width: 100%;
+  background-color: $darkwhite;
+  display: flex;
+  .testimonals-card{
+    width: 100%;
+    height: 160px;
+    padding: 15px 0px 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    .testimonals-card-body{
+      display: flex;
+      width: 100%;
+      img{
+        margin-right: 19px;
+      }
+      h3{
+        @include font('Poppins',600,18px,$black);
+        line-height: 25px;
+      }
+      h4{
+        @include font('Poppins',600,12px,$black);
+        opacity: 50%;
+        line-height: 17px;
+      }
+    }  
+    p{
+      @include font('Poppins',500,14px,$black);
+      line-height: 21px;
+    }
+  }
+}
+.testimonals-slider{
+  .testimonal-slider-control-prev,.testimonal-slider-control-next{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    border: none;
+    opacity: 100%;
+    @extend %d-flex-center;
+    &:hover{
+      background-color: $blue;
+      opacity: 100%;
+    }
+    img{
+      width: 14px;
+      height: 14px;
+    }
+  }
+  .testimonal-slider-control-next{
+    right: 25%;
+    @media (max-width:1100px) {
+      right: 30%;
+    }
+  }
+  .testimonal-slider-control-prev{
+    left: 64%;
+    @media (max-width:1100px) {
+      left: 30%;
+    }
+  }
+}
+.testimonals-slider{
+  .carousel-indicators{
+    max-width: 70px;
+    width: 100%;
+    bottom: 50px;
+    margin: 0px;
+    @media (max-width:690px) {
+      bottom: 30%;
+    }
+    .indicator-btn{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $blue;
+      @media (max-width:690px) {
+        display: none;
+      }
+    }  
+  }
+}
