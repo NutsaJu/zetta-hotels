@@ -997,3 +997,100 @@ header{
 }
 
 // rooms.html
+.rooms-list{
+  margin-top: 90px;
+  .rooms-container{
+    @extend %container;
+    @media (max-width:1110px) {
+      padding-inline: 20px;
+    }
+  }
+}
+.rooms-container{
+  .rooms-title-body{
+    width: 40%;
+    user-select: none;
+    @media (max-width:1100px) {
+      width: 100%;
+      text-align: center;
+    }
+    h4{
+      @extend %title;
+    }
+    h3{
+      @extend %subtitle;
+    }
+  }
+}
+.rooms-container{
+  .rooms-card-wrapper{
+    margin-top: 50px;
+    width: 100%; 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+    @media (max-width:930px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+}
+.rooms-card{
+  background-color: $darkwhite;
+  max-width: 536px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 2fr 0.7fr;  
+  column-gap: 16px;
+  @media (max-width:470px) {
+    grid-template-columns: 2fr 0.7fr;
+    grid-template-rows: 150px auto;
+    column-gap: 0px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    @media (max-width:470px) {
+      grid-column-end: span 3;
+    }
+  }
+  .rooms-card-title-body{
+    margin: 37px 0px 36px 0px;
+    @media (max-width:470px){
+      margin: 10px 0px 10px 10px;
+    }
+    h3{
+      @extend %title;
+    }
+    h4{
+      @include font ('Poppins',600,18px,$black);
+      line-height: 25px;
+    }
+    p{
+      margin-top: 10px;
+      @include font ('Poppins',500,14px,$darkgrey);
+      line-height: 20px;
+    }
+  }
+  a{
+    justify-self: flex-end;
+    width: 60px;
+    height: 100%;
+    background-color: $blue;
+    @extend %d-flex-center;
+    &:hover{
+      background-color: inherit;
+      border: 2px solid $blue;
+    }
+    &:hover img{
+      filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+    }
+    img{
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

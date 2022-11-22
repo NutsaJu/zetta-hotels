@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
   font-style: normal;
   font-display: swap;
 }
-.footer-copy-container, .footer .footer-container, .photo-container .photo-title-body, .blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .other-bg .other-title-box, header .main-bg .main-title-box .main-title-container, header .header-container {
+.rooms-list .rooms-container, .footer-copy-container, .footer .footer-container, .photo-container .photo-title-body, .blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .other-bg .other-title-box, header .main-bg .main-title-box .main-title-container, header .header-container {
   max-width: 1088px;
   width: 100%;
   margin: 0 auto;
@@ -106,7 +106,7 @@ input::-webkit-inner-spin-button {
           align-items: center;
 }
 
-.photo-slider .photo-slider-control-prev, .photo-slider .photo-slider-control-next, .restaurant-card a, .testimonals-slider .testimonal-slider-control-prev, .testimonals-slider .testimonal-slider-control-next, .about-us-carousel .about-us-prev-arrow, .about-us-carousel .about-us-next-arrow, .about-us-carousel .prev-btn, .about-us-carousel .next-btn, .about-us-card .about-us-card-img, .about-us-slider-bg, .about-us-wrapper a .about-us-button, .check-form button, header .main-bg .main-title-box {
+.rooms-card a, .photo-slider .photo-slider-control-prev, .photo-slider .photo-slider-control-next, .restaurant-card a, .testimonals-slider .testimonal-slider-control-prev, .testimonals-slider .testimonal-slider-control-next, .about-us-carousel .about-us-prev-arrow, .about-us-carousel .about-us-next-arrow, .about-us-carousel .prev-btn, .about-us-carousel .next-btn, .about-us-card .about-us-card-img, .about-us-slider-bg, .about-us-wrapper a .about-us-button, .check-form button, header .main-bg .main-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +118,7 @@ input::-webkit-inner-spin-button {
           align-items: center;
 }
 
-.photo-container .photo-title-body h4, .blog-card .blog-card-text-body h4, .blog-container .blog-title-body h4, .restaurant-container .restaurant-title-body h4, .testimonals-container .testimonals-title-body h4, .about-us-slider-title-body h4, .about-us-wrapper h4 {
+.rooms-card .rooms-card-title-body h3, .rooms-container .rooms-title-body h4, .photo-container .photo-title-body h4, .blog-card .blog-card-text-body h4, .blog-container .blog-title-body h4, .restaurant-container .restaurant-title-body h4, .testimonals-container .testimonals-title-body h4, .about-us-slider-title-body h4, .about-us-wrapper h4 {
   font-family: "Poppins";
   font-weight: bold;
   font-size: 14px;
@@ -126,7 +126,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
 }
 
-.photo-container .photo-title-body h3, .blog-container .blog-title-body h3, .restaurant-container .restaurant-title-body h3, .testimonals-container .testimonals-title-body h3, .about-us-slider-title-body h3, .about-us-wrapper h3 {
+.rooms-container .rooms-title-body h3, .photo-container .photo-title-body h3, .blog-container .blog-title-body h3, .restaurant-container .restaurant-title-body h3, .testimonals-container .testimonals-title-body h3, .about-us-slider-title-body h3, .about-us-wrapper h3 {
   font-family: "Poppins";
   font-weight: 800;
   font-size: 42px;
@@ -1341,4 +1341,114 @@ header .other-bg .other-title-box .other-title-box-text h4::after {
 }
 .footer-copy-container a:hover {
   color: white;
+}
+
+.rooms-list {
+  margin-top: 90px;
+}
+@media (max-width: 1110px) {
+  .rooms-list .rooms-container {
+    padding-inline: 20px;
+  }
+}
+
+.rooms-container .rooms-title-body {
+  width: 40%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 1100px) {
+  .rooms-container .rooms-title-body {
+    width: 100%;
+    text-align: center;
+  }
+}
+.rooms-container .rooms-card-wrapper {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+}
+@media (max-width: 930px) {
+  .rooms-container .rooms-card-wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.rooms-card {
+  background-color: #F8F8F8;
+  max-width: 536px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 2fr 0.7fr;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+}
+@media (max-width: 470px) {
+  .rooms-card {
+    grid-template-columns: 2fr 0.7fr;
+    grid-template-rows: 150px auto;
+    -webkit-column-gap: 0px;
+       -moz-column-gap: 0px;
+            column-gap: 0px;
+  }
+}
+.rooms-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 470px) {
+  .rooms-card img {
+    grid-column-end: span 3;
+  }
+}
+.rooms-card .rooms-card-title-body {
+  margin: 37px 0px 36px 0px;
+}
+@media (max-width: 470px) {
+  .rooms-card .rooms-card-title-body {
+    margin: 10px 0px 10px 10px;
+  }
+}
+.rooms-card .rooms-card-title-body h4 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
+  line-height: 25px;
+}
+.rooms-card .rooms-card-title-body p {
+  margin-top: 10px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  color: #B1B1B1;
+  line-height: 20px;
+}
+.rooms-card a {
+  justify-self: flex-end;
+  width: 60px;
+  height: 100%;
+  background-color: #5863F8;
+}
+.rooms-card a:hover {
+  background-color: inherit;
+  border: 2px solid #5863F8;
+}
+.rooms-card a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+          filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+}
+.rooms-card a img {
+  width: 14px;
+  height: 14px;
 }/*# sourceMappingURL=global.css.map */
