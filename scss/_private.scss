@@ -13,3 +13,11 @@
     justify-content: center;
     align-items: center;
 }
+%title{
+    @include font('Poppins',bold,14px,$blue);
+    line-height: 20px;
+}
+%subtitle{
+    @include font('Poppins',800,42px,$black);
+    line-height: 57.5px;
+}

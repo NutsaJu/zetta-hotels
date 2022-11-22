@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
   font-style: normal;
   font-display: swap;
 }
-.restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .main-bg .main-title-box .main-title-container, header .header-container {
+.blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .main-bg .main-title-box .main-title-container, header .header-container {
   max-width: 1088px;
   width: 100%;
   margin: 0 auto;
@@ -116,6 +116,22 @@ input::-webkit-inner-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.blog-card .blog-card-text-body h4, .blog-container .blog-title-body h4, .restaurant-container .restaurant-title-body h4, .testimonals-container .testimonals-title-body h4, .about-us-slider-title-body h4, .about-us-wrapper h4 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 14px;
+  color: #5863F8;
+  line-height: 20px;
+}
+
+.blog-container .blog-title-body h3, .restaurant-container .restaurant-title-body h3, .testimonals-container .testimonals-title-body h3, .about-us-slider-title-body h3, .about-us-wrapper h3 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 42px;
+  color: black;
+  line-height: 57.5px;
 }
 
 header .header-container {
@@ -375,19 +391,6 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
   }
 }
 
-.about-us-wrapper h4 {
-  font-family: "Poppins";
-  font-weight: bold;
-  font-size: 14px;
-  color: #5863F8;
-}
-.about-us-wrapper h3 {
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 42px;
-  color: black;
-  line-height: 59px;
-}
 .about-us-wrapper .about-us-text-body p:nth-child(1) {
   font-family: "Poppins";
   font-weight: 500;
@@ -471,19 +474,8 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
     text-align: center;
   }
 }
-.about-us-slider-title-body h4 {
-  font-family: "Poppins";
-  font-weight: bold;
-  font-size: 14px;
-  color: #5863F8;
-  line-height: 20px;
-}
 .about-us-slider-title-body h3 {
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 42px;
   color: white;
-  line-height: 57.5px;
   width: 45.5%;
 }
 @media (max-width: 1100px) {
@@ -639,20 +631,6 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
     text-align: center;
   }
 }
-.testimonals-container .testimonals-title-body h4 {
-  font-family: "Poppins";
-  font-weight: bold;
-  font-size: 14px;
-  color: #5863F8;
-  line-height: 20px;
-}
-.testimonals-container .testimonals-title-body h3 {
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 42px;
-  color: black;
-  line-height: 57.5px;
-}
 @media (max-width: 1100px) {
   .testimonals-container .testimonals-title-body h3 {
     text-shadow: 2px 2px white;
@@ -798,7 +776,6 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
 
 .restaurant-section {
   margin-top: 90px;
-  margin-bottom: 90px;
 }
 @media (max-width: 1115px) {
   .restaurant-section .restaurant-container {
@@ -819,21 +796,6 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
     text-align: center;
   }
 }
-.restaurant-container .restaurant-title-body h4 {
-  font-family: "Poppins";
-  font-weight: bold;
-  font-size: 14px;
-  color: #5863F8;
-  line-height: 20px;
-}
-.restaurant-container .restaurant-title-body h3 {
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 42px;
-  color: black;
-  line-height: 57.5px;
-}
-
 .restaurant-container .restaurant-card-wrapper {
   margin-top: 50px;
   width: 100%;
@@ -931,4 +893,80 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
   height: 14px;
   -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(353deg) brightness(99%) contrast(103%);
           filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(353deg) brightness(99%) contrast(103%);
+}
+
+.blog-section {
+  margin-top: 90px;
+}
+@media (max-width: 1115px) {
+  .blog-section .blog-container {
+    padding-inline: 20px;
+  }
+}
+
+.blog-container .blog-title-body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 46%;
+}
+@media (max-width: 1100px) {
+  .blog-container .blog-title-body {
+    width: 100%;
+    text-align: center;
+  }
+}
+.blog-container .blog-card-wrapper {
+  margin-top: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 1115px) {
+  .blog-container .blog-card-wrapper {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.blog-card {
+  max-width: 352px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F8F8F8;
+}
+.blog-card .blog-card-text-body {
+  margin: 23px 0px;
+  text-align: center;
+}
+.blog-card .blog-card-text-body h3 {
+  margin-top: 5px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  line-height: 25px;
+}
+.blog-card .blog-card-text-body p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  color: #B1B1B1;
+  line-height: 26px;
+  margin: 10px 46px 0px 46px;
 }/*# sourceMappingURL=global.css.map */
