@@ -676,6 +676,10 @@ header .other-bg .other-title-box .other-title-box-text h4::after {
   }
 }
 
+.about-us-html {
+  background-image: url(../images/small-room-big.webp);
+}
+
 .testimonals-container .testimonals-title-body {
   -webkit-user-select: none;
      -moz-user-select: none;

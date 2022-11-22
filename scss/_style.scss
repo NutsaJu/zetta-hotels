@@ -455,6 +455,9 @@ header{
     }
   }
 }
+.about-us-html{
+  background-image: url(../images/small-room-big.webp);
+}
 .testimonals-container{
   .testimonals-title-body{
     user-select: none;
@@ -997,6 +1000,7 @@ header{
 }
 
 // rooms.html
+        // rooms list
 .rooms-list{
   margin-top: 90px;
   .rooms-container{
@@ -1094,3 +1098,4 @@ header{
     }
   }
 }
+      // rooms-check
