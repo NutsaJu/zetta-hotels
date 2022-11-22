@@ -631,7 +631,7 @@ header{
     background-color: $blue;
     @extend %d-flex-center;
     &:hover{
-      background-color: $white;
+      background-color: inherit;
       border: 2px solid $blue;
     }
     &:hover img{
@@ -704,6 +704,121 @@ header{
       @include font('Poppins',500,14px,$darkgrey);
       line-height: 26px;
       margin: 10px 46px 0px 46px;
+    }
+  }
+}
+// photo-section
+.photo-section{
+  margin-top: 90px;
+  .photo-container{
+    width: 100%;
+  }
+}
+.photo-container{
+  .photo-title-body{
+    @extend %container;
+    @media (max-width:1115px) {
+      padding-left: 20px;
+    }
+    @media (max-width:1100px) {
+      text-align: center;
+    }
+    h4{
+      @extend %title;
+    }
+    h3{
+      @extend %subtitle;
+      width: 52%;
+      @media (max-width:1100px) {
+        width: 100%;
+      }
+      @media (max-width:585px) {
+        font-size: 36px;
+        line-height: 42px;
+      }
+    }
+  }
+}
+.photo-slider{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .photo-wrapper{
+    width: 100%;
+    display: flex;
+    .photo-bg{
+      width: 25%;
+      height: 352px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @media (max-width:1115px) {
+        width: 33.3%;
+        &:nth-child(4){
+          display: none;
+        }
+      }
+      @media (max-width:842px) {
+        width: 50%;
+        &:nth-child(3){
+          display: none;
+        }
+      }
+      @media (max-width:450px) {
+        width: 100%;
+        &:nth-child(2){
+          display: none;
+        }
+      }
+    }
+    .beach{
+      background-image: url(../images/beach.webp);
+    }
+    .towels{
+      background-image: url(../images/towels.webp);
+    }
+    .stairs{
+      background-image: url(../images/hotel-stairs.webp);
+    }
+    .cafe{
+      background-image: url(../images/hotel-cafe.webp);
+    }
+  }
+}  
+.photo-slider{
+  .photo-slider-control-prev,.photo-slider-control-next{
+    position: absolute;
+    top: 45%;
+    bottom: 0px;
+    z-index: 1;
+    @extend %d-flex-center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    opacity: 30%;
+    background-color: $blue;
+    &:hover{
+      opacity: 100%;
+    }
+    &:hover img{
+      filter: none;
+    }
+    img{
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(353deg) brightness(99%) contrast(103%);
+      width: 14px;
+      height: 14px;
+    }
+  }
+  .photo-slider-control-prev{
+    left: 7%;
+    @media (max-width:1450px) {
+      left: 2%;
+    }
+  }
+  .photo-slider-control-next{
+    right: 7%;
+    @media (max-width:1450px) {
+      right: 2%;
     }
   }
 }
