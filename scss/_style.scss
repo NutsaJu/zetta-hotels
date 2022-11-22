@@ -11,14 +11,6 @@ header {
         }
     }
 }
-header{
-    .main-bg{
-        background-image: url(../images/index-bg-banner.webp);
-        background-size: cover;
-        background-position: 30%;
-        height: 83vh;
-    }
-}
 .header-container {
   .navigation {
     justify-content: flex-end;
@@ -73,9 +65,19 @@ header{
         background-position: 30%;
         height: 83vh;
     }
+    .other-bg{
+        background-image: url(../images/banner-bg.webp);
+        background-size: cover;
+        background-position: 30%;
+        height: 324px;
+    }
+    .bg-overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,60%); 
+    }
 }
 // title-box for header in index.html
-
 header{
     .main-bg{
         .main-title-box{
@@ -114,9 +116,44 @@ header{
         }
     }
 }
-
+// title box for header in other htmls
+header{
+  .other-bg{
+    .other-title-box{
+      @extend %container;
+      user-select: none;
+      height: 274px;
+      @include d-flex-easy (flex,center,flex-start);
+      flex-direction: column;
+      @media (max-width:992px) {
+        padding-inline: 20px;
+        height: auto;
+        margin-top: 20px;
+      }
+      h3{
+        @include font('Poppins',800,42px,$white);
+        line-height: 59px;
+      }
+      .other-title-box-text{
+        margin-top: 14px;
+        @include font('Poppins',500,14px,$white);
+        line-height: 20px;
+        display: flex;
+        h4{
+          &::after{
+            content: '';
+            height: 19px;
+            border: 1px solid $white;
+            margin-left: 14px;
+            margin-right: 16px;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
       //  index.html
-
 // check section
 .check-section{
     margin-top: -74px;
@@ -958,3 +995,5 @@ header{
     }
   }
 }
+
+// rooms.html

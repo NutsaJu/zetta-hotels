@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
   font-style: normal;
   font-display: swap;
 }
-.footer-copy-container, .footer .footer-container, .photo-container .photo-title-body, .blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .main-bg .main-title-box .main-title-container, header .header-container {
+.footer-copy-container, .footer .footer-container, .photo-container .photo-title-body, .blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .other-bg .other-title-box, header .main-bg .main-title-box .main-title-container, header .header-container {
   max-width: 1088px;
   width: 100%;
   margin: 0 auto;
@@ -152,13 +152,6 @@ header .header-container {
             align-items: center;
     padding-inline: 30px;
   }
-}
-
-header .main-bg {
-  background-image: url(../images/index-bg-banner.webp);
-  background-size: cover;
-  background-position: 30%;
-  height: 83vh;
 }
 
 .header-container .navigation {
@@ -227,6 +220,17 @@ header .main-bg {
   background-position: 30%;
   height: 83vh;
 }
+header .other-bg {
+  background-image: url(../images/banner-bg.webp);
+  background-size: cover;
+  background-position: 30%;
+  height: 324px;
+}
+header .bg-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
 header .main-bg .main-title-box {
   height: 72vh;
@@ -274,6 +278,60 @@ header .main-bg .main-title-box .main-title-container .main-title-body h4 {
   font-size: 14px;
   color: white;
   line-height: 20px;
+}
+
+header .other-bg .other-title-box {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 274px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 992px) {
+  header .other-bg .other-title-box {
+    padding-inline: 20px;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+header .other-bg .other-title-box h3 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 42px;
+  color: white;
+  line-height: 59px;
+}
+header .other-bg .other-title-box .other-title-box-text {
+  margin-top: 14px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .other-bg .other-title-box .other-title-box-text h4::after {
+  content: "";
+  height: 19px;
+  border: 1px solid white;
+  margin-left: 14px;
+  margin-right: 16px;
+  background-color: white;
 }
 
 .check-section {
