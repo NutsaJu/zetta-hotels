@@ -511,6 +511,18 @@ header .other-bg .other-title-box .other-title-box-text h4::after {
   grid-column-end: span 2;
 }
 
+@media (max-width: 530px) {
+  .restaurant-img-wrapper {
+    grid-template-rows: 160px 160px;
+  }
+}
+.restaurant-img-wrapper img:nth-child(1) {
+  grid-row-end: span 2;
+}
+.restaurant-img-wrapper img:nth-child(3) {
+  grid-column-end: inherit;
+}
+
 .about-us-slider-bg {
   margin-top: 90px;
   background-image: url(../images/details-bg.webp);

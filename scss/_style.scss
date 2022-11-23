@@ -302,6 +302,19 @@ header{
     }
   }
 }
+.restaurant-img-wrapper{
+  @media (max-width:530px) {
+    grid-template-rows: 160px 160px;
+  }
+  img{
+    &:nth-child(1){
+      grid-row-end: span 2;
+    }
+    &:nth-child(3){
+      grid-column-end: inherit;
+    }
+  }
+}
 
                 // about-us details-slider
 .about-us-slider-bg{
