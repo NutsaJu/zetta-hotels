@@ -66,7 +66,167 @@
         
 
     </header>
+    <section class="map-section">
+        <div class="map-container">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.1478475275317!2d-80.83599226506642!3d35.22924478913733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a022d78b3de7%3A0x9f5c6731be8cbf86!2sUNC%20Charlotte%20Center%20City!5e0!3m2!1sen!2sge!4v1669183726837!5m2!1sen!2sge" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-overlay"></div>
+        </div>
+    </section>
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-title-body">
+                <h4>CONTACT</h4>
+                <h3>Contact us to get free support</h3>
+            </div>
 
+            <div class="contact-form-wrapper">
+                <form class="contact-form" action="https://formspree.io/f/xkneyzwz" method="POST">
+                    <textarea class="textarea" name="textarea" id="textarea" placeholder="Description" required></textarea>
+                    <input type="text"  name="subject" id="subject" placeholder="Subject" required>
+                    <input type="text" name="f-name" id="f-name" placeholder="Name / Surname" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <button type="sumbit">
+                        Send
+                        <img src="images/send-icon.svg" alt="iamge">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-card-img"><img src="images/mail.svg" alt="image"></div>
+                <h3>Email</h3>
+                <div class="contact-card-text">
+                    <a href="mailto:example@yahoo.com">example@yahoo.com</a>
+                    <a href="mailto:exampleemail2@yahoo.com">exampleemail2@yahoo.com</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-card-img"><img src="images/phone.svg" alt="image"></div>
+                <h3>Phone</h3>
+                <div class="contact-card-text">
+                    <a href="tel:+03204224254">+0 320 422 4254</a>
+                    <a href="tel:+0342552523">+0 342 552 523</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-card-img"><img src="images/map-pin.svg" alt="image"></div>
+                <h3>Location</h3>
+                <div class="contact-card-text">
+                    <a href="https://goo.gl/maps/dr5MXpPiyzSwxc9L9" target="_blank">Main Str Chicago Ilinois</a>
+                    <a href="https://goo.gl/maps/ZTHqDMhvmb2ueQCV7" target="_blank">Main Street New York City</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="photo-section">
+        <div class="photo-container">
+            <div class="photo-title-body">
+                <h4>PHOTOS</h4>
+                <h3>See our latest photos from restaurant and hotel</h3>
+            </div>
+            <div class="photo-slider">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="photo-wrapper">
+                                <div class="photo-bg beach"></div>
+                                <div class="photo-bg towels"></div>
+                                <div class="photo-bg stairs"></div>
+                                <div class="photo-bg cafe"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="photo-wrapper">
+                                <div class="photo-bg towels"></div>
+                                <div class="photo-bg stairs"></div>
+                                <div class="photo-bg cafe"></div>
+                                <div class="photo-bg beach"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="photo-wrapper">
+                                <div class="photo-bg cafe"></div>
+                                <div class="photo-bg beach"></div>
+                                <div class="photo-bg stairs"></div>
+                                <div class="photo-bg towels"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="photo-wrapper">
+                                <div class="photo-bg stairs"></div>
+                                <div class="photo-bg cafe"></div>
+                                <div class="photo-bg beach"></div>
+                                <div class="photo-bg towels"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="photo-slider-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <img src="images/arrow-left.svg" alt="images">
+                    </button>
+                    <button class="photo-slider-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <img src="images/arrow-right.svg" alt="images">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-title-wrapper">
+                <h3>Zetta Hotels</h3>
+                <p>Our hotel is an image of quality and profesionalism combined with hard work and precision. 
+                    You can expect only the best services from our staff.</p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="images/facebook.svg" alt="images">
+                    </a>
+                    <a href="https://twitter.com/home" target="_blank">
+                        <img src="images/twitter.svg" alt="images">
+                    </a>
+                    <a href="https://www.google.com/" target="_blank">
+                        <img src="images/google-plus.svg" alt="images">
+                    </a>
+                </div>    
+            </div>
+            <div class="footer-list-wrapper">
+                <div class="footer-list">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="rooms.html">Gift Card</a></li>
+                        <li><a href="about-us.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h3>Privacy</h3>
+                    <ul>
+                        <li><a href="blog.html">Career</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="restaurant.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="contact-box">
+                        <a href="mailto:example@yahoo.com"><img src="images/mail.svg" alt="images">example@yahoo.com</a>
+                        <a href="tel:+0 320 422 4254"><img src="images/phone.svg" alt="images">+0 320 422 4254</a>
+                        <a href="https://goo.gl/maps/39kHieyUXRC98FUh6" target="_blank"><img src="images/map-pin.svg" alt="images">Main Str Chicago Ilinois</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy-container">
+            <p>Copyright ©2020 All rights reserved | This template is made with love by <span>Marian</span></p>
+            <a href="www.portfolioname.com" target="_blank">www.portfolioname.com</a>
+        </div>
+    </footer>
 
 
 

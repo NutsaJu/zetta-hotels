@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
   font-style: normal;
   font-display: swap;
 }
-.rooms-check .rooms-check-container, .rooms-list .rooms-container, .footer-copy-container, .footer .footer-container, .photo-container .photo-title-body, .blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .other-bg .other-title-box, header .main-bg .main-title-box .main-title-container, header .header-container {
+.contact-section .contact-container, .contact-form-section .contact-form-container, .map-section .map-container, .rooms-check .rooms-check-container, .rooms-list .rooms-container, .footer-copy-container, .footer .footer-container, .photo-container .photo-title-body, .blog-section .blog-container, .restaurant-section .restaurant-container, .testimonals-bg .testimonals-container, .about-us-carousel .about-us-card-wrapper, .about-us-slider-title-body, .about-us .about-us-container, .check-section .check-container, header .other-bg .other-title-box, header .main-bg .main-title-box .main-title-container, header .header-container {
   max-width: 1088px;
   width: 100%;
   margin: 0 auto;
@@ -106,7 +106,7 @@ input::-webkit-inner-spin-button {
           align-items: center;
 }
 
-.rooms-check-form button, .rooms-card a, .photo-slider .photo-slider-control-prev, .photo-slider .photo-slider-control-next, .restaurant-card a, .testimonals-slider .testimonal-slider-control-prev, .testimonals-slider .testimonal-slider-control-next, .about-us-carousel .about-us-prev-arrow, .about-us-carousel .about-us-next-arrow, .about-us-carousel .prev-btn, .about-us-carousel .next-btn, .about-us-card .about-us-card-img, .about-us-slider-bg, .about-us-wrapper a .about-us-button, .check-form button, header .main-bg .main-title-box {
+.contact-card .contact-card-img, .contact-card, .contact-form button, .rooms-check-form button, .rooms-card a, .photo-slider .photo-slider-control-prev, .photo-slider .photo-slider-control-next, .restaurant-card a, .testimonals-slider .testimonal-slider-control-prev, .testimonals-slider .testimonal-slider-control-next, .about-us-carousel .about-us-prev-arrow, .about-us-carousel .about-us-next-arrow, .about-us-carousel .prev-btn, .about-us-carousel .next-btn, .about-us-card .about-us-card-img, .about-us-slider-bg, .about-us-wrapper a .about-us-button, .check-form button, header .main-bg .main-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +118,7 @@ input::-webkit-inner-spin-button {
           align-items: center;
 }
 
-.rooms-card .rooms-card-title-body h3, .rooms-container .rooms-title-body h4, .photo-container .photo-title-body h4, .blog-card .blog-card-text-body h4, .blog-container .blog-title-body h4, .restaurant-container .restaurant-title-body h4, .testimonals-container .testimonals-title-body h4, .about-us-slider-title-body h4, .about-us-wrapper h4 {
+.contact-form-container .contact-title-body h4, .rooms-card .rooms-card-title-body h3, .rooms-container .rooms-title-body h4, .photo-container .photo-title-body h4, .blog-card .blog-card-text-body h4, .blog-container .blog-title-body h4, .restaurant-container .restaurant-title-body h4, .testimonals-container .testimonals-title-body h4, .about-us-slider-title-body h4, .about-us-wrapper h4 {
   font-family: "Poppins";
   font-weight: bold;
   font-size: 14px;
@@ -126,7 +126,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
 }
 
-.rooms-container .rooms-title-body h3, .photo-container .photo-title-body h3, .blog-container .blog-title-body h3, .restaurant-container .restaurant-title-body h3, .testimonals-container .testimonals-title-body h3, .about-us-slider-title-body h3, .about-us-wrapper h3 {
+.contact-form-container .contact-title-body h3, .rooms-container .rooms-title-body h3, .photo-container .photo-title-body h3, .blog-container .blog-title-body h3, .restaurant-container .restaurant-title-body h3, .testimonals-container .testimonals-title-body h3, .about-us-slider-title-body h3, .about-us-wrapper h3 {
   font-family: "Poppins";
   font-weight: 800;
   font-size: 42px;
@@ -176,7 +176,7 @@ header .header-container {
 }
 .header-container .navigation .navbar-ul .nav-li {
   font-family: "Poppins";
-  font-weight: normal;
+  font-weight: 600;
   font-size: 12px;
   color: white;
 }
@@ -1554,4 +1554,257 @@ header .other-bg .other-title-box .other-title-box-text h4::after {
 }
 .rooms-check-form button img {
   margin-left: 10px;
+}
+
+.map-section {
+  margin-top: 50px;
+}
+@media (max-width: 1100px) {
+  .map-section {
+    padding-inline: 10px;
+  }
+}
+.map-section .map-container {
+  height: 286px;
+  position: relative;
+}
+
+.map-container .map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.map-container .map-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  pointer-events: none;
+}
+
+.contact-form-section {
+  margin-top: 50px;
+}
+@media (max-width: 1100px) {
+  .contact-form-section {
+    padding-inline: 20px;
+  }
+}
+.contact-form-container .contact-title-body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 46%;
+}
+@media (max-width: 1100px) {
+  .contact-form-container .contact-title-body {
+    width: 100%;
+    text-align: center;
+  }
+}
+.contact-form-wrapper {
+  margin-top: 50px;
+}
+.contact-form-wrapper .contact-form {
+  height: 288px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 570px) {
+  .contact-form-wrapper .contact-form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    height: auto;
+  }
+}
+
+.contact-form .textarea {
+  padding: 20px 20px;
+  resize: none;
+  outline: none;
+  background-color: #F8F8F8;
+  border: 2px solid #E8E8E8;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+@media (min-width: 570px) {
+  .contact-form .textarea {
+    grid-column-end: span 2;
+    grid-row-end: span 4;
+  }
+}
+.contact-form .textarea::-webkit-input-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form .textarea::-moz-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form .textarea:-ms-input-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form .textarea::-ms-input-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form .textarea::placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form input {
+  height: 60px;
+  padding: 20px 20px;
+  outline: none;
+  background-color: #F8F8F8;
+  border: 2px solid #E8E8E8;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form input::-webkit-input-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form input::-moz-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form input:-ms-input-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form input::-ms-input-placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form input::placeholder {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+}
+.contact-form button {
+  height: 60px;
+  background-color: #5863F8;
+  border: none;
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+.contact-form button:hover {
+  border: 2px solid #5863F8;
+  color: #5863F8;
+  font-weight: 600;
+  background-color: rgba(88, 99, 248, 0.3);
+}
+.contact-form button:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+          filter: brightness(0) saturate(100%) invert(34%) sepia(40%) saturate(3604%) hue-rotate(225deg) brightness(99%) contrast(97%);
+}
+.contact-form button img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+
+.contact-section {
+  margin-top: 50px;
+}
+@media (max-width: 1100px) {
+  .contact-section {
+    padding-inline: 20px;
+  }
+}
+.contact-section .contact-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 652px) {
+  .contact-section .contact-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 470px) {
+  .contact-section .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-card {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact-card .contact-card-img {
+  width: 59px;
+  height: 59px;
+  background-color: #5863F8;
+  border-radius: 50%;
+}
+.contact-card .contact-card-img:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 10ms ease-in-out;
+  transition: all 10ms ease-in-out;
+}
+.contact-card h3 {
+  margin-top: 15px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
+  line-height: 25px;
+}
+.contact-card .contact-card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.contact-card .contact-card-text a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  color: #B1B1B1;
+  line-height: 22px;
+}
+.contact-card .contact-card-text a:hover {
+  color: #5863F8;
 }/*# sourceMappingURL=global.css.map */
